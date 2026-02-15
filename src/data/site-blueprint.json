@@ -1,0 +1,1081 @@
+{
+  "siteConfig": {
+    "brandName": "Lakeside Equipment & Carl's Rentals",
+    "tagline": "Equipment and Party Rental Experts in San Diego and Lakeside CA",
+    "usp": "No sales tax on any rental. Local and Independent. 40 years of service.",
+    "colors": {
+      "primary": "#00449E",
+      "secondary": "#FF7F00",
+      "accent": "#F0F4F8",
+      "text": "#333333",
+      "background": "#FFFFFF"
+    },
+    "fonts": {
+      "headings": "Roboto",
+      "body": "Open Sans"
+    },
+    "locations": [
+      {
+        "name": "Lakeside Equipment",
+        "address": "11925 Woodside Ave, Lakeside, CA 92040",
+        "phone": "619-561-7845"
+      },
+      {
+        "name": "Carl's Rentals",
+        "address": "3704 University Ave, San Diego, CA 92105",
+        "phone": "619-282-5995"
+      }
+    ],
+    "images": {
+      "logoLakeside": "/images/lakeside-equipment-logo.png",
+      "logoCarls": "/images/carls-rentals-logo.png",
+      "itemImagesDir": "/images/equipment/"
+    }
+  },
+  "pages": [
+    {
+      "slug": "/",
+      "title": "Equipment & Party Rentals in San Diego & Lakeside, CA | Lakeside Equipment",
+      "metaDescription": "Your local, independent source for equipment and party rentals in San Diego. No sales tax on any rental. 40 years of service. Two locations in Lakeside and San Diego.",
+      "h1": "Equipment and Party Rental Experts in San Diego",
+      "type": "home"
+    },
+    {
+      "slug": "/about-us",
+      "title": "About Lakeside Equipment Sales & Rental in San Diego, CA",
+      "metaDescription": "Learn about the history of Lakeside Equipment Sales & Rental, a family-owned and operated business serving San Diego for over 40 years.",
+      "h1": "About Us",
+      "type": "static"
+    },
+    {
+      "slug": "/contact-us",
+      "title": "Contact Lakeside Equipment & Carl's Rentals | San Diego & Lakeside",
+      "metaDescription": "Contact us for your equipment and party rental needs. Find phone numbers, addresses, and store hours for our San Diego and Lakeside locations.",
+      "h1": "Contact Us",
+      "type": "static"
+    },
+    {
+      "slug": "/concrete-sales",
+      "title": "Cart-Away Concrete Sales in San Diego CA | Lakeside Equipment",
+      "metaDescription": "Get your Cart-Away concrete from our Lakeside location. We offer 1-yard concrete trailers for your small to medium-sized projects. We fill it, you pour it!",
+      "h1": "Cart-Away Concrete Sales",
+      "type": "static"
+    },
+    {
+      "slug": "/locations",
+      "title": "Our Locations | San Diego & Lakeside Rental Stores",
+      "metaDescription": "Find Lakeside Equipment and Carl's Rentals in San Diego and Lakeside, CA. Get addresses, phone numbers, and hours for both of our convenient rental locations.",
+      "h1": "Our San Diego & Lakeside Locations",
+      "type": "static"
+    },
+    {
+      "slug": "/rentals/miscellaneous-equipment",
+      "title": "Miscellaneous Equipment Rentals in San Diego, CA | Lakeside Equipment",
+      "metaDescription": "Looking for miscellaneous equipment rentals in San Diego CA? Browse our extensive online rental catalog to rent your miscellaneous equipment or just call us today.",
+      "h1": "Miscellaneous Equipment Rentals",
+      "type": "category",
+      "items": [
+        {
+          "name": "2 ramps",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/12189.jpg",
+          "pricing": {
+            "daily": "40.00",
+            "weekly": "160.00",
+            "monthly": "480.00"
+          },
+          "localImagePath": "/images/equipment/12189.jpg"
+        },
+        {
+          "name": "Stapler wide crown",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/11957.jpg",
+          "pricing": {
+            "daily": "30.00",
+            "weekly": "120.00",
+            "monthly": "360.00"
+          },
+          "localImagePath": "/images/equipment/11957.jpg"
+        },
+        {
+          "name": "Bolt cutters 24 inch",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/12155.jpg",
+          "pricing": {
+            "daily": "20.00",
+            "weekly": "80.00",
+            "monthly": "240.00"
+          },
+          "localImagePath": "/images/equipment/12155.jpg"
+        },
+        {
+          "name": "Cable ramp 3 foot",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/12256.jpg",
+          "pricing": {
+            "daily": "19.00",
+            "weekly": "76.00",
+            "monthly": "304.00"
+          },
+          "localImagePath": "/images/equipment/12256.jpg"
+        },
+        {
+          "name": "Cone",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/12375.jpg",
+          "pricing": {
+            "daily": "2.00",
+            "weekly": "7.00",
+            "monthly": "17.00"
+          },
+          "localImagePath": "/images/equipment/12375.jpg"
+        },
+        {
+          "name": "Crowd fence",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/12455.jpg",
+          "pricing": {
+            "daily": "5.00",
+            "weekly": "20.00",
+            "monthly": "75.00"
+          },
+          "localImagePath": "/images/equipment/12455.jpg"
+        },
+        {
+          "name": "Delineator",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/12374.jpg",
+          "pricing": {
+            "daily": "4.00",
+            "weekly": "14.00",
+            "monthly": "32.00"
+          },
+          "localImagePath": "/images/equipment/12374.jpg"
+        },
+        {
+          "name": "Extension cord 50ft",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/11736.jpg",
+          "pricing": {
+            "daily": "10.00",
+            "weekly": "40.00",
+            "monthly": "160.00"
+          },
+          "localImagePath": "/images/equipment/11736.jpg"
+        },
+        {
+          "name": "Fish tape 120 ft",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/12390.jpg",
+          "pricing": {
+            "daily": "18.00",
+            "weekly": "72.00",
+            "monthly": "216.00"
+          },
+          "localImagePath": "/images/equipment/12390.jpg"
+        },
+        {
+          "name": "Hydrant wrench",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/12546.jpg",
+          "pricing": {
+            "daily": "18.00",
+            "weekly": "36.00",
+            "monthly": "72.00"
+          },
+          "localImagePath": "/images/equipment/12546.jpg"
+        },
+        {
+          "name": "Engine hoist towable",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/12317.jpg",
+          "pricing": {
+            "daily": "50.00",
+            "weekly": "200.00",
+            "monthly": "600.00"
+          },
+          "localImagePath": "/images/equipment/12317.jpg"
+        },
+        {
+          "name": "Ladder 10 foot a frame",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/11928.jpg",
+          "pricing": {
+            "daily": "25.00",
+            "weekly": "100.00",
+            "monthly": "300.00"
+          },
+          "localImagePath": "/images/equipment/11928.jpg"
+        },
+        {
+          "name": "Johnson bar",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/12081.jpg",
+          "pricing": {
+            "daily": "20.00",
+            "weekly": "80.00",
+            "monthly": "240.00"
+          },
+          "localImagePath": "/images/equipment/12081.jpg"
+        },
+        {
+          "name": "Ladder 12 foot a frame",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/11883.jpg",
+          "pricing": {
+            "daily": "25.00",
+            "weekly": "100.00",
+            "monthly": "300.00"
+          },
+          "localImagePath": "/images/equipment/11883.jpg"
+        },
+        {
+          "name": "Ladder 8 foot a frame",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/11852.jpg",
+          "pricing": {
+            "daily": "25.00",
+            "weekly": "100.00",
+            "monthly": "300.00"
+          },
+          "localImagePath": "/images/equipment/11852.jpg"
+        },
+        {
+          "name": "Ladder 6ft a frame",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/11985.jpg",
+          "pricing": {
+            "daily": "20.00",
+            "weekly": "80.00",
+            "monthly": "240.00"
+          },
+          "localImagePath": "/images/equipment/11985.jpg"
+        },
+        {
+          "name": "Hudson fire pump sprayer",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/11632.jpg",
+          "pricing": {
+            "daily": "35.00",
+            "weekly": "140.00",
+            "monthly": "420.00"
+          },
+          "localImagePath": "/images/equipment/11632.jpg"
+        },
+        {
+          "name": "Ladder ext 20 ft",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/11922.jpg",
+          "pricing": {
+            "daily": "35.00",
+            "weekly": "140.00",
+            "monthly": "420.00"
+          },
+          "localImagePath": "/images/equipment/11922.jpg"
+        },
+        {
+          "name": "Nail gun brad",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/11959.jpg",
+          "pricing": {
+            "daily": "30.00",
+            "weekly": "120.00",
+            "monthly": "360.00"
+          },
+          "localImagePath": "/images/equipment/11959.jpg"
+        },
+        {
+          "name": "Ladder ext 24 ft",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/11921.jpg",
+          "pricing": {
+            "daily": "35.00",
+            "weekly": "140.00",
+            "monthly": "420.00"
+          },
+          "localImagePath": "/images/equipment/11921.jpg"
+        },
+        {
+          "name": "Pry bar",
+          "originalImageUrl": null,
+          "pricing": {
+            "daily": null,
+            "weekly": null,
+            "monthly": null
+          }
+        },
+        {
+          "name": "Pipe cutter manual",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/12156.jpg",
+          "pricing": {
+            "daily": "10.00",
+            "weekly": "40.00",
+            "monthly": "160.00"
+          },
+          "localImagePath": "/images/equipment/12156.jpg"
+        },
+        {
+          "name": "Pigtail electrical",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/12035.jpg",
+          "pricing": {
+            "daily": "8.00",
+            "weekly": "32.00",
+            "monthly": "96.00"
+          },
+          "localImagePath": "/images/equipment/12035.jpg"
+        },
+        {
+          "name": "Scrubber exhaust",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/11944.jpg",
+          "pricing": {
+            "daily": "25.00",
+            "weekly": "100.00",
+            "monthly": "300.00"
+          },
+          "localImagePath": "/images/equipment/11944.jpg"
+        },
+        {
+          "name": "Shop vac ridgid",
+          "originalImageUrl": null,
+          "pricing": {
+            "daily": null,
+            "weekly": null,
+            "monthly": null
+          }
+        },
+        {
+          "name": "Stapler floor air 1/2 inch crown",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/11960.jpg",
+          "pricing": {
+            "daily": "40.00",
+            "weekly": "160.00",
+            "monthly": "480.00"
+          },
+          "localImagePath": "/images/equipment/11960.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "/rentals/moving-equipment",
+      "title": "Moving Equipment Rentals in San Diego, CA | Lakeside Equipment",
+      "metaDescription": "Looking for moving equipment rentals in San Diego CA? Browse our extensive online rental catalog to rent your moving equipment or just call us today.",
+      "h1": "Moving Equipment Rentals",
+      "type": "category",
+      "items": [
+        {
+          "name": "Cantilever dolly",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/11965.jpg",
+          "pricing": {
+            "daily": "35.00",
+            "weekly": "140.00",
+            "monthly": "420.00"
+          },
+          "localImagePath": "/images/equipment/11965.jpg"
+        },
+        {
+          "name": "Appliance dolly",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/12201.jpg",
+          "pricing": {
+            "daily": "25.00",
+            "weekly": "100.00",
+            "monthly": "300.00"
+          },
+          "localImagePath": "/images/equipment/12201.jpg"
+        },
+        {
+          "name": "Honda utility truck gas",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/12395.jpg",
+          "pricing": {
+            "daily": "100.00",
+            "weekly": "295.00",
+            "monthly": "855.00"
+          },
+          "localImagePath": "/images/equipment/12395.jpg"
+        },
+        {
+          "name": "Golf cart w/charger",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/12445.jpg",
+          "pricing": {
+            "daily": "125.00",
+            "weekly": "375.00",
+            "monthly": "750.00"
+          },
+          "localImagePath": "/images/equipment/12445.jpg"
+        },
+        {
+          "name": "Come along 2000lb capacity",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/12161.jpg",
+          "pricing": {
+            "daily": "18.00",
+            "weekly": "72.00",
+            "monthly": "216.00"
+          },
+          "localImagePath": "/images/equipment/12161.jpg"
+        },
+        {
+          "name": "Ramps aluminum folding",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/11847.jpg",
+          "pricing": {
+            "daily": "25.00",
+            "weekly": "100.00",
+            "monthly": "300.00"
+          },
+          "localImagePath": "/images/equipment/11847.jpg"
+        },
+        {
+          "name": "Tree dolly",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/12162.jpg",
+          "pricing": {
+            "daily": "55.00",
+            "weekly": "220.00",
+            "monthly": "660.00"
+          },
+          "localImagePath": "/images/equipment/12162.jpg"
+        },
+        {
+          "name": "Sledge hammer",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/12321.jpg",
+          "pricing": {
+            "daily": "10.00",
+            "weekly": "40.00",
+            "monthly": "120.00"
+          },
+          "localImagePath": "/images/equipment/12321.jpg"
+        },
+        {
+          "name": "Pallet jack",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/11956.jpg",
+          "pricing": {
+            "daily": "48.00",
+            "weekly": "175.00",
+            "monthly": "445.00"
+          },
+          "localImagePath": "/images/equipment/11956.jpg"
+        },
+        {
+          "name": "Utility dolly",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/11871.jpg",
+          "pricing": {
+            "daily": "20.00",
+            "weekly": "80.00",
+            "monthly": "240.00"
+          },
+          "localImagePath": "/images/equipment/11871.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "/rentals/plumbing-equipment",
+      "title": "Plumbing Equipment Rentals in San Diego, CA | Lakeside Equipment",
+      "metaDescription": "Looking for plumbing equipment rentals in San Diego CA? Browse our extensive online rental catalog to rent your plumbing equipment or just call us today.",
+      "h1": "Plumbing Equipment Rentals",
+      "type": "category",
+      "items": [
+        {
+          "name": "Drain jetter electric",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/12046.jpg",
+          "pricing": {
+            "daily": "85.00",
+            "weekly": "340.00",
+            "monthly": "1,020.00"
+          },
+          "localImagePath": "/images/equipment/12046.jpg"
+        },
+        {
+          "name": "Drain snake 50 foot 1/2 inch cable",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/10296.jpg",
+          "pricing": {
+            "daily": "50.00",
+            "weekly": "200.00",
+            "monthly": "600.00"
+          },
+          "localImagePath": "/images/equipment/10296.jpg"
+        },
+        {
+          "name": "Kinetic water ram",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/11708.jpg",
+          "pricing": {
+            "daily": "35.00",
+            "weekly": "140.00",
+            "monthly": "420.00"
+          },
+          "localImagePath": "/images/equipment/11708.jpg"
+        },
+        {
+          "name": "Snake main line 5/8 inch cable 100 foot",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/10295.jpg",
+          "pricing": {
+            "daily": "60.00",
+            "weekly": "240.00",
+            "monthly": "720.00"
+          },
+          "localImagePath": "/images/equipment/10295.jpg"
+        },
+        {
+          "name": "Drill drain snake",
+          "originalImageUrl": null,
+          "pricing": {
+            "daily": null,
+            "weekly": null,
+            "monthly": null
+          }
+        }
+      ]
+    },
+    {
+      "slug": "/rentals/pressure-washer",
+      "title": "Pressure Washer Rentals in San Diego, CA | Lakeside Equipment",
+      "metaDescription": "Looking for pressure washer rentals in San Diego CA? Browse our extensive online rental catalog to rent your pressure washer or just call us today.",
+      "h1": "Pressure Washer Rentals",
+      "type": "category",
+      "items": [
+        {
+          "name": "Driveway/surface pressure washer",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/12281.jpg",
+          "pricing": {
+            "daily": "95.00",
+            "weekly": "380.00",
+            "monthly": "1,140.00"
+          },
+          "localImagePath": "/images/equipment/12281.jpg"
+        },
+        {
+          "name": "Oscilating pressure washer tip",
+          "originalImageUrl": null,
+          "pricing": {
+            "daily": null,
+            "weekly": null,
+            "monthly": null
+          }
+        },
+        {
+          "name": "Hot pressure washer",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/12230.jpg",
+          "pricing": {
+            "daily": "150.00",
+            "weekly": "600.00",
+            "monthly": "1,800.00"
+          },
+          "localImagePath": "/images/equipment/12230.jpg"
+        },
+        {
+          "name": "Pressure washer 3000 psi",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/10287.jpg",
+          "pricing": {
+            "daily": "85.00",
+            "weekly": "340.00",
+            "monthly": "1,020.00"
+          },
+          "localImagePath": "/images/equipment/10287.jpg"
+        },
+        {
+          "name": "Pressure washer electric",
+          "originalImageUrl": null,
+          "pricing": {
+            "daily": null,
+            "weekly": null,
+            "monthly": null
+          }
+        }
+      ]
+    },
+    {
+      "slug": "/rentals/pump",
+      "title": "Pump Rentals in San Diego, CA | Lakeside Equipment",
+      "metaDescription": "Looking for pump rentals in San Diego CA? Browse our extensive online rental catalog to rent your pump or just call us today.",
+      "h1": "Pump Rentals",
+      "type": "category",
+      "items": [
+        {
+          "name": "Hose 4 inch discharge",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/11651.jpg",
+          "pricing": {
+            "daily": "15.00",
+            "weekly": "60.00",
+            "monthly": "180.00"
+          },
+          "localImagePath": "/images/equipment/11651.jpg"
+        },
+        {
+          "name": "Hose 2 inch discharge",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/11835.jpg",
+          "pricing": {
+            "daily": "15.00",
+            "weekly": "60.00",
+            "monthly": "180.00"
+          },
+          "localImagePath": "/images/equipment/11835.jpg"
+        },
+        {
+          "name": "Hose 1.5 inch x50 foot double jacket fire hose",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/12502.jpg",
+          "pricing": {
+            "daily": "30.00",
+            "weekly": "120.00",
+            "monthly": "360.00"
+          },
+          "localImagePath": "/images/equipment/12502.jpg"
+        },
+        {
+          "name": "Fire hose nozzle",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/12503.jpg",
+          "pricing": {
+            "daily": "10.00",
+            "weekly": "40.00",
+            "monthly": "120.00"
+          },
+          "localImagePath": "/images/equipment/12503.jpg"
+        },
+        {
+          "name": "Hose 3 inch discharge",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/11911.jpg",
+          "pricing": {
+            "daily": "15.00",
+            "weekly": "60.00",
+            "monthly": "180.00"
+          },
+          "localImagePath": "/images/equipment/11911.jpg"
+        },
+        {
+          "name": "Hose intake 2 inch",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/12500.jpg",
+          "pricing": {
+            "daily": "15.00",
+            "weekly": "60.00",
+            "monthly": "180.00"
+          },
+          "localImagePath": "/images/equipment/12500.jpg"
+        },
+        {
+          "name": "Pump submersible 2 inch trash",
+          "originalImageUrl": "https://www.le-rentals.com/itemimages/10355.jpg",
+          "pricing": {
+            "daily": "40.00",
+            "weekly": "160.00",
+            "monthly": "480.00"
+          },
+          "localImagePath": "/images/equipment/10355.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "/rentals/saw",
+      "title": "Saw Rentals in San Diego, CA | Lakeside Equipment",
+      "metaDescription": "Looking for saw rentals in San Diego CA? Browse our extensive online rental catalog to rent your saw or just call us today.",
+      "h1": "Saw Rentals",
+      "type": "category",
+      "items": []
+    },
+    {
+      "slug": "/rentals/sander",
+      "title": "Sander Rentals in San Diego, CA | Lakeside Equipment",
+      "metaDescription": "Looking for sander rentals in San Diego CA? Browse our extensive online rental catalog to rent your sander or just call us today.",
+      "h1": "Sander Rentals",
+      "type": "category",
+      "items": []
+    },
+    {
+      "slug": "/rentals/scaffolding",
+      "title": "Scaffolding Rentals in San Diego, CA | Lakeside Equipment",
+      "metaDescription": "Looking for scaffolding rentals in San Diego CA? Browse our extensive online rental catalog to rent your scaffolding or just call us today.",
+      "h1": "Scaffolding Rentals",
+      "type": "category",
+      "items": []
+    },
+    {
+      "slug": "/rentals/steel-accessories",
+      "title": "Steel Accessories Rentals in San Diego, CA | Lakeside Equipment",
+      "metaDescription": "Looking for steel accessories rentals in San Diego CA? Browse our extensive online rental catalog to rent your steel accessories or just call us today.",
+      "h1": "Steel Accessories Rentals",
+      "type": "category",
+      "items": []
+    },
+    {
+      "slug": "/rentals/trailer",
+      "title": "Trailer Rentals in San Diego, CA | Lakeside Equipment",
+      "metaDescription": "Looking for trailer rentals in San Diego CA? Browse our extensive online rental catalog to rent your trailer or just call us today.",
+      "h1": "Trailer Rentals",
+      "type": "category",
+      "items": []
+    },
+    {
+      "slug": "/rentals/skidsteer",
+      "title": "Skidsteer Rentals in San Diego, CA | Lakeside Equipment",
+      "metaDescription": "Looking for skidsteer rentals in San Diego CA? Browse our extensive online rental catalog to rent your skidsteer or just call us today.",
+      "h1": "Skidsteer Rentals",
+      "type": "category",
+      "items": []
+    },
+    {
+      "slug": "/rentals/audio-equipment",
+      "title": "Audio Equipment Rentals in San Diego, CA | Lakeside Equipment",
+      "metaDescription": "Looking for audio equipment rentals in San Diego CA? Browse our extensive online rental catalog to rent your audio equipment or just call us today.",
+      "h1": "Audio Equipment Rentals",
+      "type": "category",
+      "items": []
+    },
+    {
+      "slug": "/rentals/chair",
+      "title": "Chair Rentals in San Diego, CA | Lakeside Equipment",
+      "metaDescription": "Looking for chair rentals in San Diego CA? Browse our extensive online rental catalog to rent your chair or just call us today.",
+      "h1": "Chair Rentals",
+      "type": "category",
+      "items": []
+    },
+    {
+      "slug": "/rentals/concession-equipment",
+      "title": "Concession Equipment Rentals in San Diego, CA | Lakeside Equipment",
+      "metaDescription": "Looking for concession equipment rentals in San Diego CA? Browse our extensive online rental catalog to rent your concession equipment or just call us today.",
+      "h1": "Concession Equipment Rentals",
+      "type": "category",
+      "items": []
+    },
+    {
+      "slug": "/rentals/game",
+      "title": "Game Rentals in San Diego, CA | Lakeside Equipment",
+      "metaDescription": "Looking for game rentals in San Diego CA? Browse our extensive online rental catalog to rent your game or just call us today.",
+      "h1": "Game Rentals",
+      "type": "category",
+      "items": []
+    },
+    {
+      "slug": "/rentals/linen",
+      "title": "Linen Rentals in San Diego, CA | Lakeside Equipment",
+      "metaDescription": "Looking for linen rentals in San Diego CA? Browse our extensive online rental catalog to rent your linen or just call us today.",
+      "h1": "Linen Rentals",
+      "type": "category",
+      "items": []
+    },
+    {
+      "slug": "/rentals/table",
+      "title": "Table Rentals in San Diego, CA | Lakeside Equipment",
+      "metaDescription": "Looking for table rentals in San Diego CA? Browse our extensive online rental catalog to rent your table or just call us today.",
+      "h1": "Table Rentals",
+      "type": "category",
+      "items": []
+    },
+    {
+      "slug": "/rentals/tent",
+      "title": "Tent Rentals in San Diego, CA | Lakeside Equipment",
+      "metaDescription": "Looking for tent rentals in San Diego CA? Browse our extensive online rental catalog to rent your tent or just call us today.",
+      "h1": "Tent Rentals",
+      "type": "category",
+      "items": []
+    },
+    {
+      "slug": "/rentals/wedding-accessories",
+      "title": "Wedding Accessories Rentals in San Diego, CA | Lakeside Equipment",
+      "metaDescription": "Looking for wedding accessories rentals in San Diego CA? Browse our extensive online rental catalog to rent your wedding accessories or just call us today.",
+      "h1": "Wedding Accessories Rentals",
+      "type": "category",
+      "items": []
+    },
+    {
+      "slug": "/rentals/excavating-equipment",
+      "title": "Excavating Equipment Rentals in San Diego, CA | Lakeside Equipment",
+      "metaDescription": "Looking for excavating equipment rentals in San Diego CA? Browse our extensive online rental catalog to rent your excavating equipment or just call us today.",
+      "h1": "Excavating Equipment Rentals",
+      "type": "category",
+      "items": []
+    },
+    {
+      "slug": "/rentals/air-compressor",
+      "title": "Air Compressor Rentals in San Diego, CA | Lakeside Equipment",
+      "metaDescription": "Looking for air compressor rentals in San Diego CA? Browse our extensive online rental catalog to rent your air compressor or just call us today.",
+      "h1": "Air Compressor Rentals",
+      "type": "category",
+      "items": []
+    },
+    {
+      "slug": "/rentals/air-tool",
+      "title": "Air Tool Rentals in San Diego, CA | Lakeside Equipment",
+      "metaDescription": "Looking for air tool rentals in San Diego CA? Browse our extensive online rental catalog to rent your air tool or just call us today.",
+      "h1": "Air Tool Rentals",
+      "type": "category",
+      "items": []
+    },
+    {
+      "slug": "/rentals/attachment",
+      "title": "Attachment Rentals in San Diego, CA | Lakeside Equipment",
+      "metaDescription": "Looking for attachment rentals in San Diego CA? Browse our extensive online rental catalog to rent your attachment or just call us today.",
+      "h1": "Attachment Rentals",
+      "type": "category",
+      "items": []
+    },
+    {
+      "slug": "/rentals/compaction-equipment",
+      "title": "Compaction Equipment Rentals in San Diego, CA | Lakeside Equipment",
+      "metaDescription": "Looking for compaction equipment rentals in San Diego CA? Browse our extensive online rental catalog to rent your compaction equipment or just call us today.",
+      "h1": "Compaction Equipment Rentals",
+      "type": "category",
+      "items": []
+    },
+    {
+      "slug": "/rentals/carpet-equipment",
+      "title": "Carpet Equipment Rentals in San Diego, CA | Lakeside Equipment",
+      "metaDescription": "Looking for carpet equipment rentals in San Diego CA? Browse our extensive online rental catalog to rent your carpet equipment or just call us today.",
+      "h1": "Carpet Equipment Rentals",
+      "type": "category",
+      "items": []
+    },
+    {
+      "slug": "/rentals/concrete-equipment",
+      "title": "Concrete Equipment Rentals in San Diego, CA | Lakeside Equipment",
+      "metaDescription": "Looking for concrete equipment rentals in San Diego CA? Browse our extensive online rental catalog to rent your concrete equipment or just call us today.",
+      "h1": "Concrete Equipment Rentals",
+      "type": "category",
+      "items": []
+    },
+    {
+      "slug": "/rentals/diamond-blade",
+      "title": "Diamond Blade Rentals in San Diego, CA | Lakeside Equipment",
+      "metaDescription": "Looking for diamond blade rentals in San Diego CA? Browse our extensive online rental catalog to rent your diamond blade or just call us today.",
+      "h1": "Diamond Blade Rentals",
+      "type": "category",
+      "items": []
+    },
+    {
+      "slug": "/rentals/drill",
+      "title": "Drill Rentals in San Diego, CA | Lakeside Equipment",
+      "metaDescription": "Looking for drill rentals in San Diego CA? Browse our extensive online rental catalog to rent your drill or just call us today.",
+      "h1": "Drill Rentals",
+      "type": "category",
+      "items": []
+    },
+    {
+      "slug": "/rentals/flooring-equipment",
+      "title": "Flooring Equipment Rentals in San Diego, CA | Lakeside Equipment",
+      "metaDescription": "Looking for flooring equipment rentals in San Diego CA? Browse our extensive online rental catalog to rent your flooring equipment or just call us today.",
+      "h1": "Flooring Equipment Rentals",
+      "type": "category",
+      "items": []
+    },
+    {
+      "slug": "/rentals/generator",
+      "title": "Generator Rentals in San Diego, CA | Lakeside Equipment",
+      "metaDescription": "Looking for generator rentals in San Diego CA? Browse our extensive online rental catalog to rent your generator or just call us today.",
+      "h1": "Generator Rentals",
+      "type": "category",
+      "items": []
+    },
+    {
+      "slug": "/rentals/grinder",
+      "title": "Grinder Rentals in San Diego, CA | Lakeside Equipment",
+      "metaDescription": "Looking for grinder rentals in San Diego CA? Browse our extensive online rental catalog to rent your grinder or just call us today.",
+      "h1": "Grinder Rentals",
+      "type": "category",
+      "items": []
+    },
+    {
+      "slug": "/rentals/hammer",
+      "title": "Hammer Rentals in San Diego, CA | Lakeside Equipment",
+      "metaDescription": "Looking for hammer rentals in San Diego CA? Browse our extensive online rental catalog to rent your hammer or just call us today.",
+      "h1": "Hammer Rentals",
+      "type": "category",
+      "items": []
+    },
+    {
+      "slug": "/rentals/lift",
+      "title": "Lift Rentals in San Diego, CA | Lakeside Equipment",
+      "metaDescription": "Looking for lift rentals in San Diego CA? Browse our extensive online rental catalog to rent your lift or just call us today.",
+      "h1": "Lift Rentals",
+      "type": "category",
+      "items": []
+    },
+    {
+      "slug": "/rentals/light-tower",
+      "title": "Light Tower Rentals in San Diego, CA | Lakeside Equipment",
+      "metaDescription": "Looking for light tower rentals in San Diego CA? Browse our extensive online rental catalog to rent your light tower or just call us today.",
+      "h1": "Light Tower Rentals",
+      "type": "category",
+      "items": []
+    },
+    {
+      "slug": "/rentals/lawn-and-garden-equipment",
+      "title": "Lawn and Garden Equipment Rentals in San Diego, CA | Lakeside Equipment",
+      "metaDescription": "Looking for lawn and garden equipment rentals in San Diego CA? Browse our extensive online rental catalog to rent your lawn and garden equipment or just call us today.",
+      "h1": "Lawn and Garden Equipment Rentals",
+      "type": "category",
+      "items": []
+    },
+    {
+      "slug": "/equipment-rentals",
+      "title": "Equipment Rentals in San Diego & Lakeside CA",
+      "metaDescription": "Browse our full inventory of construction and landscaping equipment for rent in San Diego, Lakeside, El Cajon, and Santee CA. No sales tax.",
+      "h1": "Equipment Rentals in San Diego & Lakeside CA",
+      "type": "hub"
+    },
+    {
+      "slug": "/party-rentals",
+      "title": "Party Rentals in San Diego CA | Tables, Chairs, Tents",
+      "metaDescription": "Rent tables, chairs, tents, linens, audio equipment for your San Diego event. No sales tax. Delivery available.",
+      "h1": "Party Rentals in San Diego CA",
+      "type": "hub"
+    },
+    {
+      "slug": "/resources",
+      "title": "Rental Resources & FAQ | Lakeside Equipment",
+      "metaDescription": "Rental tips, delivery info, FAQ for equipment and party rentals in San Diego and Lakeside CA.",
+      "h1": "Rental Resources & FAQ",
+      "type": "static"
+    },
+    {
+      "slug": "/supplies-sales",
+      "title": "Contractor Supplies in San Diego CA",
+      "metaDescription": "Shop contractor supplies and accessories at Lakeside Equipment.",
+      "h1": "Contractor Supplies for Sale",
+      "type": "static"
+    },
+    {
+      "slug": "/new-equipment-sales",
+      "title": "Stihl Equipment Sales in San Diego CA",
+      "metaDescription": "Authorized Stihl dealer in Lakeside CA. Chainsaws, trimmers, blowers.",
+      "h1": "New Equipment Sales \u2014 Authorized Stihl Dealer",
+      "type": "static"
+    }
+  ],
+  "seoStrategy": [
+    {
+      "keyword": "equipment rental san diego",
+      "estMonthlyVolume": 2500,
+      "targetPage": "/"
+    },
+    {
+      "keyword": "party rentals san diego",
+      "estMonthlyVolume": 3000,
+      "targetPage": "/rentals/chair"
+    },
+    {
+      "keyword": "construction equipment rental san diego",
+      "estMonthlyVolume": 800,
+      "targetPage": "/rentals/excavating-equipment"
+    },
+    {
+      "keyword": "tool rental san diego",
+      "estMonthlyVolume": 600,
+      "targetPage": "/rentals/air-tool"
+    },
+    {
+      "keyword": "skid steer rental san diego",
+      "estMonthlyVolume": 350,
+      "targetPage": "/rentals/skidsteer"
+    },
+    {
+      "keyword": "excavator rental san diego",
+      "estMonthlyVolume": 300,
+      "targetPage": "/rentals/excavating-equipment"
+    },
+    {
+      "keyword": "pressure washer rental san diego",
+      "estMonthlyVolume": 250,
+      "targetPage": "/rentals/pressure-washer"
+    },
+    {
+      "keyword": "lift rental san diego",
+      "estMonthlyVolume": 400,
+      "targetPage": "/rentals/lift"
+    },
+    {
+      "keyword": "scaffolding rental san diego",
+      "estMonthlyVolume": 200,
+      "targetPage": "/rentals/scaffolding"
+    },
+    {
+      "keyword": "generator rental san diego",
+      "estMonthlyVolume": 300,
+      "targetPage": "/rentals/generator"
+    },
+    {
+      "keyword": "table and chair rentals san diego",
+      "estMonthlyVolume": 1500,
+      "targetPage": "/rentals/table"
+    },
+    {
+      "keyword": "tent rentals san diego",
+      "estMonthlyVolume": 1200,
+      "targetPage": "/rentals/tent"
+    },
+    {
+      "keyword": "lakeside equipment rental",
+      "estMonthlyVolume": 100,
+      "targetPage": "/locations"
+    },
+    {
+      "keyword": "carl's rentals san diego",
+      "estMonthlyVolume": 150,
+      "targetPage": "/locations"
+    },
+    {
+      "keyword": "cheap equipment rental san diego",
+      "estMonthlyVolume": 200,
+      "targetPage": "/"
+    },
+    {
+      "keyword": "lawn and garden equipment rental san diego",
+      "estMonthlyVolume": 150,
+      "targetPage": "/rentals/lawn-and-garden-equipment"
+    },
+    {
+      "keyword": "compaction equipment rental san diego",
+      "estMonthlyVolume": 80,
+      "targetPage": "/rentals/compaction-equipment"
+    },
+    {
+      "keyword": "moving equipment rental san diego",
+      "estMonthlyVolume": 250,
+      "targetPage": "/rentals/moving-equipment"
+    },
+    {
+      "keyword": "plumbing snake rental san diego",
+      "estMonthlyVolume": 120,
+      "targetPage": "/rentals/plumbing-equipment"
+    },
+    {
+      "keyword": "concrete trailer rental san diego",
+      "estMonthlyVolume": 90,
+      "targetPage": "/concrete-sales"
+    }
+  ],
+  "blogPlan": [
+    {
+      "title": "How Much Does It Cost to Rent a Skid Steer in San Diego? (2026 Guide)",
+      "targetKeyword": "cost to rent skid steer san diego",
+      "estMonthlyVolume": 50
+    },
+    {
+      "title": "DIY Landscaping: 5 Essential Pieces of Garden Equipment to Rent",
+      "targetKeyword": "diy garden equipment rental",
+      "estMonthlyVolume": 70
+    },
+    {
+      "title": "Planning a Backyard Party? Your Ultimate Party Rental Checklist",
+      "targetKeyword": "backyard party rental checklist",
+      "estMonthlyVolume": 120
+    },
+    {
+      "title": "Concrete Projects Made Easy: When to Use a Cart-Away Concrete Trailer",
+      "targetKeyword": "cart-away concrete for small jobs",
+      "estMonthlyVolume": 80
+    },
+    {
+      "title": "Pressure Washer vs. Power Washer: Which One Do You Need to Rent?",
+      "targetKeyword": "rent pressure washer vs power washer",
+      "estMonthlyVolume": 90
+    },
+    {
+      "title": "The Top 3 Lifts to Rent for Residential Painting and Repair Jobs",
+      "targetKeyword": "rent a lift for painting house",
+      "estMonthlyVolume": 60
+    },
+    {
+      "title": "How to Choose the Right Size Generator for Your Outdoor Event",
+      "targetKeyword": "choose generator for event rental",
+      "estMonthlyVolume": 110
+    },
+    {
+      "title": "Unclogging Drains Like a Pro: A Guide to Renting and Using a Plumbing Snake",
+      "targetKeyword": "how to use a rental plumbing snake",
+      "estMonthlyVolume": 70
+    },
+    {
+      "title": "Saving Money on Your Next Move: What Moving Equipment Should You Rent?",
+      "targetKeyword": "what moving equipment to rent",
+      "estMonthlyVolume": 150
+    },
+    {
+      "title": "Setting Up Scaffolding Safely: A Beginner's Guide",
+      "targetKeyword": "how to set up rental scaffolding safely",
+      "estMonthlyVolume": 90
+    },
+    {
+      "title": "Tent Rental Guide: Choosing the Perfect Tent for Your San Diego Wedding",
+      "targetKeyword": "san diego wedding tent rental guide",
+      "estMonthlyVolume": 80
+    },
+    {
+      "title": "Why Renting Equipment Saves You Money Over Buying (No Sales Tax!)",
+      "targetKeyword": "rent vs buy construction equipment",
+      "estMonthlyVolume": 200
+    }
+  ]
+}
