@@ -1,65 +1,126 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import Link from "next/link";
+import { Hero } from "@/components/hero";
+import { CategoryCard } from "@/components/category-card";
+import { CtaBanner } from "@/components/cta-banner";
+import { LocationCard } from "@/components/location-card";
+import { Badge } from "@/components/ui/badge";
+import { getFeaturedCategories, siteConfig, getPage } from "@/lib/data";
+import { ShieldCheck, MapPin, Clock, DollarSign } from "lucide-react";
 
-export default function Home() {
+const page = getPage("/")!;
+
+export const metadata: Metadata = {
+  title: page.title,
+  description: page.metaDescription,
+};
+
+const usps = [
+  { icon: DollarSign, title: "No Sales Tax", desc: "Save money on every rental — no sales tax charged." },
+  { icon: Clock, title: "40+ Years of Service", desc: "Trusted by San Diego since 1985." },
+  { icon: MapPin, title: "2 Convenient Locations", desc: "Lakeside and San Diego stores to serve you." },
+  { icon: ShieldCheck, title: "Local & Independent", desc: "Family-owned, personalized service." },
+];
+
+export default function HomePage() {
+  const featured = getFeaturedCategories();
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: siteConfig.brandName,
+    description: page.metaDescription,
+    url: "https://www.le-rentals.com",
+    telephone: siteConfig.locations[0].phone,
+    address: siteConfig.locations.map((loc) => ({
+      "@type": "PostalAddress",
+      streetAddress: loc.address.split(",")[0],
+      addressLocality: loc.address.includes("Lakeside") ? "Lakeside" : "San Diego",
+      addressRegion: "CA",
+      postalCode: loc.address.match(/\d{5}/)?.[0],
+    })),
+  };
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
+      <Hero />
+
+      {/* Featured Categories */}
+      <section className="py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <Badge className="mb-4 bg-brand-orange/10 text-brand-orange border-brand-orange/20">
+              Popular Rentals
+            </Badge>
+            <h2 className="text-3xl font-bold text-brand-text">
+              Featured Rental Categories
+            </h2>
+            <p className="mt-2 text-muted-foreground">
+              Browse our most popular equipment and party rental categories
+            </p>
+          </div>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {featured.map((cat) => (
+              <CategoryCard key={cat.slug} category={cat} />
+            ))}
+          </div>
+          <div className="mt-8 flex justify-center gap-4">
+            <Link
+              href="/equipment-rentals"
+              className="rounded-md bg-brand-blue px-6 py-3 text-sm font-medium text-white hover:bg-brand-blue/90"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              All Equipment Rentals
+            </Link>
+            <Link
+              href="/party-rentals"
+              className="rounded-md border border-brand-blue px-6 py-3 text-sm font-medium text-brand-blue hover:bg-brand-accent"
             >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+              All Party Rentals
+            </Link>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* USP Section */}
+      <section className="bg-brand-accent py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-center text-3xl font-bold text-brand-text">
+            Why Choose Lakeside Equipment?
+          </h2>
+          <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {usps.map((usp) => (
+              <div key={usp.title} className="text-center">
+                <div className="mx-auto flex size-14 items-center justify-center rounded-full bg-brand-blue text-white">
+                  <usp.icon className="size-6" />
+                </div>
+                <h3 className="mt-4 text-lg font-semibold text-brand-text">{usp.title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">{usp.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Locations */}
+      <section className="py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-center text-3xl font-bold text-brand-text">
+            Our Locations
+          </h2>
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            {siteConfig.locations.map((loc) => (
+              <LocationCard key={loc.name} location={loc} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <CtaBanner />
+    </>
   );
 }
