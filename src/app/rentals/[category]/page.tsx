@@ -14,6 +14,7 @@ import {
   buildOrganizationJsonLd,
   buildWebPageJsonLd,
   buildWebSiteJsonLd,
+  normalizePrice,
 } from "@/lib/seo";
 import { JsonLd } from "@/components/json-ld";
 
@@ -82,18 +83,21 @@ export default async function CategoryPageRoute({
     name: page.h1,
     numberOfItems: page.items.length,
     itemListElement: page.items.map((item, i) => {
+      const dailyPrice = normalizePrice(item.pricing?.daily);
+      const weeklyPrice = normalizePrice(item.pricing?.weekly);
+      const monthlyPrice = normalizePrice(item.pricing?.monthly);
       const priceSpecs = [
-        item.pricing?.daily
-          ? { "@type": "UnitPriceSpecification", price: item.pricing.daily, priceCurrency: "USD", unitText: "day" }
+        dailyPrice
+          ? { "@type": "UnitPriceSpecification", price: dailyPrice, priceCurrency: "USD", unitText: "day" }
           : null,
-        item.pricing?.weekly
-          ? { "@type": "UnitPriceSpecification", price: item.pricing.weekly, priceCurrency: "USD", unitText: "week" }
+        weeklyPrice
+          ? { "@type": "UnitPriceSpecification", price: weeklyPrice, priceCurrency: "USD", unitText: "week" }
           : null,
-        item.pricing?.monthly
-          ? { "@type": "UnitPriceSpecification", price: item.pricing.monthly, priceCurrency: "USD", unitText: "month" }
+        monthlyPrice
+          ? { "@type": "UnitPriceSpecification", price: monthlyPrice, priceCurrency: "USD", unitText: "month" }
           : null,
       ].filter(Boolean);
-      const primaryPrice = item.pricing?.daily || item.pricing?.weekly || item.pricing?.monthly;
+      const primaryPrice = dailyPrice || weeklyPrice || monthlyPrice;
       const offers = primaryPrice
         ? {
             "@type": "Offer",

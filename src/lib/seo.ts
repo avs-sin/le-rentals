@@ -17,6 +17,19 @@ export function resolveOgImage(imagePath?: string): string {
   return absoluteUrl(path);
 }
 
+export function normalizePrice(value?: string | null): string | undefined {
+  if (!value) return undefined;
+  const normalized = String(value).replace(/[^0-9.]/g, "");
+  return normalized || undefined;
+}
+
+export function formatPhoneForSchema(phone: string): string {
+  const digits = phone.replace(/\D/g, "");
+  if (digits.length === 10) return `+1${digits}`;
+  if (digits.length === 11 && digits.startsWith("1")) return `+${digits}`;
+  return phone;
+}
+
 export function buildMetadata({
   title,
   description,
@@ -92,7 +105,7 @@ export function buildOrganizationJsonLd() {
     logo: resolveOgImage(siteConfig.images.logoLakeside),
     contactPoint: siteConfig.locations.map((loc) => ({
       "@type": "ContactPoint",
-      telephone: loc.phone,
+      telephone: formatPhoneForSchema(loc.phone),
       contactType: "customer service",
       areaServed: "US-CA",
     })),
@@ -141,7 +154,7 @@ export function buildLocalBusinessJsonLd(location: Location) {
     "@id": `${SITE_URL}#${slugify(location.name)}`,
     name: location.name,
     url: SITE_URL,
-    telephone: location.phone,
+    telephone: formatPhoneForSchema(location.phone),
     image: resolveOgImage(isCarls ? siteConfig.images.logoCarls : siteConfig.images.logoLakeside),
     address: buildPostalAddress(location.address),
     areaServed: "San Diego County, CA",

@@ -19,10 +19,7 @@ const openSans = Open_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.le-rentals.com"),
-  title: {
-    default: "Equipment & Party Rentals in San Diego & Lakeside, CA | Lakeside Equipment",
-    template: "%s | Lakeside Equipment",
-  },
+  title: "Equipment & Party Rentals in San Diego & Lakeside, CA | Lakeside Equipment",
   description:
     "Your local, independent source for equipment and party rentals in San Diego. No sales tax on any rental. 40 years of service. Two locations in Lakeside and San Diego.",
   openGraph: {
@@ -41,9 +38,6 @@ export const metadata: Metadata = {
     description:
       "Your local, independent source for equipment and party rentals in San Diego. No sales tax on any rental. 40 years of service.",
     images: ["/images/lakeside-equipment-logo.png"],
-  },
-  alternates: {
-    canonical: "/",
   },
   robots: {
     index: true,
