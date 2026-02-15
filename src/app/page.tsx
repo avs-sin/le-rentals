@@ -13,6 +13,7 @@ const page = getPage("/")!;
 export const metadata: Metadata = {
   title: page.title,
   description: page.metaDescription,
+  alternates: { canonical: "/" },
 };
 
 const usps = [

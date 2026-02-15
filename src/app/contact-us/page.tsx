@@ -8,6 +8,7 @@ const page = getPage("/contact-us")!;
 export const metadata: Metadata = {
   title: page.title,
   description: page.metaDescription,
+  alternates: { canonical: "/contact-us" },
 };
 
 export default function ContactUsPage() {

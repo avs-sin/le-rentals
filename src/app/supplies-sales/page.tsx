@@ -7,6 +7,7 @@ const page = getPage("/supplies-sales")!;
 export const metadata: Metadata = {
   title: page.title,
   description: page.metaDescription,
+  alternates: { canonical: "/supplies-sales" },
 };
 
 export default function SuppliesSalesPage() {

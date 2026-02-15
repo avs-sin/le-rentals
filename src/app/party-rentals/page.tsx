@@ -9,6 +9,7 @@ const page = getPage("/party-rentals")!;
 export const metadata: Metadata = {
   title: page.title,
   description: page.metaDescription,
+  alternates: { canonical: "/party-rentals" },
 };
 
 export default function PartyRentalsPage() {

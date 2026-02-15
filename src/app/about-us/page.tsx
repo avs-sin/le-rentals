@@ -7,6 +7,7 @@ const page = getPage("/about-us")!;
 export const metadata: Metadata = {
   title: page.title,
   description: page.metaDescription,
+  alternates: { canonical: "/about-us" },
 };
 
 export default function AboutUsPage() {

@@ -29,7 +29,7 @@ export function Header() {
         <Link href="/" className="flex items-center gap-3">
           <Image
             src="/images/lakeside-equipment-logo.png"
-            alt="Lakeside Equipment"
+            alt="Lakeside Equipment - Equipment and Party Rentals in San Diego"
             width={140}
             height={40}
             className="h-10 w-auto"

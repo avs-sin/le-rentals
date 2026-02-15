@@ -8,6 +8,7 @@ const page = getPage("/locations")!;
 export const metadata: Metadata = {
   title: page.title,
   description: page.metaDescription,
+  alternates: { canonical: "/locations" },
 };
 
 export default function LocationsPage() {

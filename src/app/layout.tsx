@@ -18,12 +18,43 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.le-rentals.com"),
   title: {
     default: "Equipment & Party Rentals in San Diego & Lakeside, CA | Lakeside Equipment",
     template: "%s | Lakeside Equipment",
   },
   description:
     "Your local, independent source for equipment and party rentals in San Diego. No sales tax on any rental. 40 years of service. Two locations in Lakeside and San Diego.",
+  openGraph: {
+    title: "Equipment & Party Rentals in San Diego & Lakeside, CA | Lakeside Equipment",
+    description:
+      "Your local, independent source for equipment and party rentals in San Diego. No sales tax on any rental. 40 years of service. Two locations in Lakeside and San Diego.",
+    url: "https://www.le-rentals.com",
+    siteName: "Lakeside Equipment",
+    locale: "en_US",
+    type: "website",
+    images: ["/images/lakeside-equipment-logo.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Equipment & Party Rentals in San Diego & Lakeside, CA | Lakeside Equipment",
+    description:
+      "Your local, independent source for equipment and party rentals in San Diego. No sales tax on any rental. 40 years of service.",
+    images: ["/images/lakeside-equipment-logo.png"],
+  },
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({

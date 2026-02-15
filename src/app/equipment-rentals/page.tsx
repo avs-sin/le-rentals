@@ -9,6 +9,7 @@ const page = getPage("/equipment-rentals")!;
 export const metadata: Metadata = {
   title: page.title,
   description: page.metaDescription,
+  alternates: { canonical: "/equipment-rentals" },
 };
 
 export default function EquipmentRentalsPage() {
