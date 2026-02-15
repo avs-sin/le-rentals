@@ -6,15 +6,23 @@ import { CtaBanner } from "@/components/cta-banner";
 import { LocationCard } from "@/components/location-card";
 import { Badge } from "@/components/ui/badge";
 import { getFeaturedCategories, siteConfig, getPage } from "@/lib/data";
+import {
+  buildLocalBusinessJsonLd,
+  buildMetadata,
+  buildOrganizationJsonLd,
+  buildWebPageJsonLd,
+  buildWebSiteJsonLd,
+} from "@/lib/seo";
+import { JsonLd } from "@/components/json-ld";
 import { ShieldCheck, MapPin, Clock, DollarSign } from "lucide-react";
 
 const page = getPage("/")!;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: page.title,
   description: page.metaDescription,
-  alternates: { canonical: "/" },
-};
+  path: "/",
+});
 
 const usps = [
   { icon: DollarSign, title: "No Sales Tax", desc: "Save money on every rental — no sales tax charged." },
@@ -28,26 +36,21 @@ export default function HomePage() {
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: siteConfig.brandName,
-    description: page.metaDescription,
-    url: "https://www.le-rentals.com",
-    telephone: siteConfig.locations[0].phone,
-    address: siteConfig.locations.map((loc) => ({
-      "@type": "PostalAddress",
-      streetAddress: loc.address.split(",")[0],
-      addressLocality: loc.address.includes("Lakeside") ? "Lakeside" : "San Diego",
-      addressRegion: "CA",
-      postalCode: loc.address.match(/\d{5}/)?.[0],
-    })),
+    "@graph": [
+      buildOrganizationJsonLd(),
+      buildWebSiteJsonLd(),
+      buildWebPageJsonLd({
+        title: page.title,
+        description: page.metaDescription,
+        path: "/",
+      }),
+      ...siteConfig.locations.map((location) => buildLocalBusinessJsonLd(location)),
+    ],
   };
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <JsonLd data={jsonLd} />
 
       <Hero />
 

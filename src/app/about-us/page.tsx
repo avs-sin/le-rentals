@@ -1,18 +1,44 @@
 import type { Metadata } from "next";
 import { getPage, siteConfig } from "@/lib/data";
 import { CtaBanner } from "@/components/cta-banner";
+import {
+  SITE_URL,
+  buildMetadata,
+  buildOrganizationJsonLd,
+  buildWebPageJsonLd,
+  buildWebSiteJsonLd,
+} from "@/lib/seo";
+import { JsonLd } from "@/components/json-ld";
 
 const page = getPage("/about-us")!;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: page.title,
   description: page.metaDescription,
-  alternates: { canonical: "/about-us" },
-};
+  path: "/about-us",
+});
 
 export default function AboutUsPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      buildOrganizationJsonLd(),
+      buildWebSiteJsonLd(),
+      {
+        ...buildWebPageJsonLd({
+          title: page.title,
+          description: page.metaDescription,
+          path: "/about-us",
+          type: "AboutPage",
+        }),
+        mainEntity: { "@id": `${SITE_URL}#organization` },
+      },
+    ],
+  };
+
   return (
     <>
+      <JsonLd data={jsonLd} />
       <section className="py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-bold text-brand-text">{page.h1}</h1>

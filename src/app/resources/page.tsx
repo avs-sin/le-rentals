@@ -1,14 +1,22 @@
 import type { Metadata } from "next";
 import { getPage } from "@/lib/data";
 import { CtaBanner } from "@/components/cta-banner";
+import {
+  SITE_URL,
+  absoluteUrl,
+  buildMetadata,
+  buildOrganizationJsonLd,
+  buildWebSiteJsonLd,
+} from "@/lib/seo";
+import { JsonLd } from "@/components/json-ld";
 
 const page = getPage("/resources")!;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: page.title,
   description: page.metaDescription,
-  alternates: { canonical: "/resources" },
-};
+  path: "/resources",
+});
 
 const faqs = [
   {
@@ -48,23 +56,33 @@ const faqs = [
 export default function ResourcesPage() {
   const faqJsonLd = {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqs.map((faq) => ({
-      "@type": "Question",
-      name: faq.q,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.a,
+    "@graph": [
+      buildOrganizationJsonLd(),
+      buildWebSiteJsonLd(),
+      {
+        "@type": "FAQPage",
+        "@id": absoluteUrl("/resources"),
+        name: page.title,
+        description: page.metaDescription,
+        url: absoluteUrl("/resources"),
+        isPartOf: {
+          "@id": `${SITE_URL}#website`,
+        },
+        mainEntity: faqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.q,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.a,
+          },
+        })),
       },
-    })),
+    ],
   };
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
+      <JsonLd data={faqJsonLd} />
       <section className="py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-bold text-brand-text">{page.h1}</h1>

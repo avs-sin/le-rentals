@@ -8,6 +8,14 @@ import { CtaBanner } from "@/components/cta-banner";
 import { Badge } from "@/components/ui/badge";
 import { Phone } from "lucide-react";
 import type { CategoryPage } from "@/lib/types";
+import {
+  absoluteUrl,
+  buildMetadata,
+  buildOrganizationJsonLd,
+  buildWebPageJsonLd,
+  buildWebSiteJsonLd,
+} from "@/lib/seo";
+import { JsonLd } from "@/components/json-ld";
 
 export function generateStaticParams() {
   return getCategoryPages().map((p) => ({
@@ -23,11 +31,14 @@ export async function generateMetadata({
   const { category } = await params;
   const page = getPage(`/rentals/${category}`);
   if (!page) return { title: "Not Found" };
-  return {
+  const categoryPage = page as CategoryPage;
+  const ogImage = categoryPage.items.find((item) => item.localImagePath)?.localImagePath;
+  return buildMetadata({
     title: page.title,
     description: page.metaDescription,
-    alternates: { canonical: `/rentals/${category}` },
-  };
+    path: `/rentals/${category}`,
+    image: ogImage,
+  });
 }
 
 export default async function CategoryPageRoute({
@@ -47,6 +58,7 @@ export default async function CategoryPageRoute({
   const isParty = partySlugs.has(category);
   const hubLink = isParty ? "/party-rentals" : "/equipment-rentals";
   const hubLabel = isParty ? "Party Rentals" : "Equipment Rentals";
+  const pageUrl = absoluteUrl(`/rentals/${category}`);
 
   // Related categories (same hub, excluding current, max 4)
   const siblingCategories = isParty ? getPartyCategories() : getEquipmentCategories();
@@ -56,59 +68,82 @@ export default async function CategoryPageRoute({
 
   // JSON-LD: BreadcrumbList
   const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.le-rentals.com" },
-      { "@type": "ListItem", position: 2, name: hubLabel, item: `https://www.le-rentals.com${hubLink}` },
-      { "@type": "ListItem", position: 3, name: page.h1 },
+      { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") },
+      { "@type": "ListItem", position: 2, name: hubLabel, item: absoluteUrl(hubLink) },
+      { "@type": "ListItem", position: 3, name: page.h1, item: pageUrl },
     ],
   };
 
   // JSON-LD: ItemList with Product schema
   const itemListJsonLd = page.items.length > 0 ? {
-    "@context": "https://schema.org",
     "@type": "ItemList",
     name: page.h1,
     numberOfItems: page.items.length,
-    itemListElement: page.items.map((item, i) => ({
-      "@type": "ListItem",
-      position: i + 1,
-      item: {
-        "@type": "Product",
-        name: item.name,
-        ...(item.localImagePath ? { image: `https://www.le-rentals.com${item.localImagePath}` } : {}),
-        ...(item.pricing?.daily ? {
-          offers: {
+    itemListElement: page.items.map((item, i) => {
+      const priceSpecs = [
+        item.pricing?.daily
+          ? { "@type": "UnitPriceSpecification", price: item.pricing.daily, priceCurrency: "USD", unitText: "day" }
+          : null,
+        item.pricing?.weekly
+          ? { "@type": "UnitPriceSpecification", price: item.pricing.weekly, priceCurrency: "USD", unitText: "week" }
+          : null,
+        item.pricing?.monthly
+          ? { "@type": "UnitPriceSpecification", price: item.pricing.monthly, priceCurrency: "USD", unitText: "month" }
+          : null,
+      ].filter(Boolean);
+      const primaryPrice = item.pricing?.daily || item.pricing?.weekly || item.pricing?.monthly;
+      const offers = primaryPrice
+        ? {
             "@type": "Offer",
-            price: item.pricing.daily,
+            price: primaryPrice,
             priceCurrency: "USD",
-            priceSpecification: {
-              "@type": "UnitPriceSpecification",
-              price: item.pricing.daily,
-              priceCurrency: "USD",
-              unitText: "DAY",
-            },
+            url: pageUrl,
             availability: "https://schema.org/InStock",
+            ...(priceSpecs.length > 0 ? { priceSpecification: priceSpecs } : {}),
+          }
+        : null;
+      return {
+        "@type": "ListItem",
+        position: i + 1,
+        item: {
+          "@type": "Product",
+          name: item.name,
+          ...(item.description ? { description: item.description } : {}),
+          ...(item.localImagePath ? { image: absoluteUrl(item.localImagePath) } : {}),
+          ...(offers ? { offers } : {}),
+          brand: {
+            "@type": "Brand",
+            name: siteConfig.brandName,
           },
-        } : {}),
-      },
-    })),
+        },
+      };
+    }),
   } : null;
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      buildOrganizationJsonLd(),
+      buildWebSiteJsonLd(),
+      {
+        ...buildWebPageJsonLd({
+          title: page.title,
+          description: page.metaDescription,
+          path: `/rentals/${category}`,
+          type: "CollectionPage",
+        }),
+        ...(itemListJsonLd ? { mainEntity: itemListJsonLd } : {}),
+      },
+      breadcrumbJsonLd,
+      ...(itemListJsonLd ? [itemListJsonLd] : []),
+    ],
+  };
 
   return (
     <>
-      {/* JSON-LD Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
-      {itemListJsonLd && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
-        />
-      )}
+      <JsonLd data={jsonLd} />
 
       <section className="py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

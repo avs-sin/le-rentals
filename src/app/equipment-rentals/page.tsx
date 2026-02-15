@@ -3,20 +3,59 @@ import { getPage, getEquipmentCategories } from "@/lib/data";
 import { CategoryCard } from "@/components/category-card";
 import { CtaBanner } from "@/components/cta-banner";
 import { Badge } from "@/components/ui/badge";
+import {
+  absoluteUrl,
+  buildMetadata,
+  buildOrganizationJsonLd,
+  buildWebPageJsonLd,
+  buildWebSiteJsonLd,
+} from "@/lib/seo";
+import { JsonLd } from "@/components/json-ld";
 
 const page = getPage("/equipment-rentals")!;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: page.title,
   description: page.metaDescription,
-  alternates: { canonical: "/equipment-rentals" },
-};
+  path: "/equipment-rentals",
+});
 
 export default function EquipmentRentalsPage() {
   const categories = getEquipmentCategories();
+  const itemList = {
+    "@type": "ItemList",
+    name: page.h1,
+    itemListElement: categories.map((cat, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "Thing",
+        name: cat.h1,
+        url: absoluteUrl(cat.slug),
+      },
+    })),
+  };
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      buildOrganizationJsonLd(),
+      buildWebSiteJsonLd(),
+      {
+        ...buildWebPageJsonLd({
+          title: page.title,
+          description: page.metaDescription,
+          path: "/equipment-rentals",
+          type: "CollectionPage",
+        }),
+        mainEntity: itemList,
+      },
+    ],
+  };
 
   return (
     <>
+      <JsonLd data={jsonLd} />
       <section className="py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Badge className="mb-4 bg-brand-orange/10 text-brand-orange border-brand-orange/20">

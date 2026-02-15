@@ -2,18 +2,59 @@ import type { Metadata } from "next";
 import { getPage, siteConfig } from "@/lib/data";
 import { LocationCard } from "@/components/location-card";
 import { CtaBanner } from "@/components/cta-banner";
+import {
+  buildLocalBusinessJsonLd,
+  buildMetadata,
+  buildOrganizationJsonLd,
+  buildWebPageJsonLd,
+  buildWebSiteJsonLd,
+} from "@/lib/seo";
+import { JsonLd } from "@/components/json-ld";
 
 const page = getPage("/locations")!;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: page.title,
   description: page.metaDescription,
-  alternates: { canonical: "/locations" },
-};
+  path: "/locations",
+});
 
 export default function LocationsPage() {
+  const locationsJsonLd = siteConfig.locations.map((location) => buildLocalBusinessJsonLd(location));
+  const itemList = {
+    "@type": "ItemList",
+    name: "Locations",
+    itemListElement: locationsJsonLd.map((location, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@id": location["@id"],
+        name: location.name,
+        url: location.url,
+      },
+    })),
+  };
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      buildOrganizationJsonLd(),
+      buildWebSiteJsonLd(),
+      {
+        ...buildWebPageJsonLd({
+          title: page.title,
+          description: page.metaDescription,
+          path: "/locations",
+          type: "CollectionPage",
+        }),
+        mainEntity: itemList,
+      },
+      ...locationsJsonLd,
+    ],
+  };
+
   return (
     <>
+      <JsonLd data={jsonLd} />
       <section className="py-16">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-bold text-brand-text">{page.h1}</h1>

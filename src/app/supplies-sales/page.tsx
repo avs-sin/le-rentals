@@ -1,18 +1,40 @@
 import type { Metadata } from "next";
 import { getPage } from "@/lib/data";
 import { CtaBanner } from "@/components/cta-banner";
+import {
+  buildMetadata,
+  buildOrganizationJsonLd,
+  buildWebPageJsonLd,
+  buildWebSiteJsonLd,
+} from "@/lib/seo";
+import { JsonLd } from "@/components/json-ld";
 
 const page = getPage("/supplies-sales")!;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: page.title,
   description: page.metaDescription,
-  alternates: { canonical: "/supplies-sales" },
-};
+  path: "/supplies-sales",
+});
 
 export default function SuppliesSalesPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      buildOrganizationJsonLd(),
+      buildWebSiteJsonLd(),
+      buildWebPageJsonLd({
+        title: page.title,
+        description: page.metaDescription,
+        path: "/supplies-sales",
+        type: "WebPage",
+      }),
+    ],
+  };
+
   return (
     <>
+      <JsonLd data={jsonLd} />
       <section className="py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-bold text-brand-text">{page.h1}</h1>

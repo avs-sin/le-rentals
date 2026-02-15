@@ -2,18 +2,40 @@ import type { Metadata } from "next";
 import { getPage } from "@/lib/data";
 import { CtaBanner } from "@/components/cta-banner";
 import { Badge } from "@/components/ui/badge";
+import {
+  buildMetadata,
+  buildOrganizationJsonLd,
+  buildWebPageJsonLd,
+  buildWebSiteJsonLd,
+} from "@/lib/seo";
+import { JsonLd } from "@/components/json-ld";
 
 const page = getPage("/concrete-sales")!;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: page.title,
   description: page.metaDescription,
-  alternates: { canonical: "/concrete-sales" },
-};
+  path: "/concrete-sales",
+});
 
 export default function ConcreteSalesPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      buildOrganizationJsonLd(),
+      buildWebSiteJsonLd(),
+      buildWebPageJsonLd({
+        title: page.title,
+        description: page.metaDescription,
+        path: "/concrete-sales",
+        type: "WebPage",
+      }),
+    ],
+  };
+
   return (
     <>
+      <JsonLd data={jsonLd} />
       <section className="py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <Badge className="mb-4 bg-brand-orange/10 text-brand-orange border-brand-orange/20">
