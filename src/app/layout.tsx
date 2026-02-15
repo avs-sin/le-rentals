@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Roboto, Open_Sans } from "next/font/google";
+import { Phone } from "lucide-react";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import "./globals.css";
@@ -36,6 +37,15 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+
+        {/* Floating call button for mobile */}
+        <a
+          href="tel:6195617845"
+          className="fixed bottom-4 right-4 z-50 flex size-14 items-center justify-center rounded-full bg-brand-orange text-white shadow-lg hover:bg-brand-orange/90 lg:hidden"
+          aria-label="Call us"
+        >
+          <Phone className="size-6" />
+        </a>
       </body>
     </html>
   );

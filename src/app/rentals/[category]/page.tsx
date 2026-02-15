@@ -3,7 +3,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getCategoryPages, getPage, siteConfig } from "@/lib/data";
 import { ItemCard } from "@/components/item-card";
-import { PricingTable } from "@/components/pricing-table";
 import { CtaBanner } from "@/components/cta-banner";
 import { Badge } from "@/components/ui/badge";
 import { Phone } from "lucide-react";
@@ -68,21 +67,11 @@ export default async function CategoryPageRoute({
           <h1 className="text-4xl font-bold text-brand-text">{page.h1}</h1>
 
           {page.items.length > 0 ? (
-            <>
-              <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                {page.items.map((item, i) => (
-                  <ItemCard key={i} item={item} />
-                ))}
-              </div>
-
-              {/* Pricing Table */}
-              <div className="mt-12">
-                <h2 className="text-2xl font-bold text-brand-text mb-4">Pricing Overview</h2>
-                <div className="rounded-lg border overflow-hidden">
-                  <PricingTable items={page.items} />
-                </div>
-              </div>
-            </>
+            <div className="mt-10 grid gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+              {page.items.map((item, i) => (
+                <ItemCard key={i} item={item} />
+              ))}
+            </div>
           ) : (
             <div className="mt-10 rounded-lg bg-brand-accent p-8 text-center">
               <h2 className="text-2xl font-bold text-brand-text">
@@ -108,6 +97,15 @@ export default async function CategoryPageRoute({
         </div>
       </section>
       <CtaBanner />
+
+      {/* Floating call button on mobile */}
+      <a
+        href="tel:6195617845"
+        className="fixed bottom-4 right-4 z-50 flex size-14 items-center justify-center rounded-full bg-brand-orange text-white shadow-lg hover:bg-brand-orange/90 lg:hidden"
+        aria-label="Call us"
+      >
+        <Phone className="size-6" />
+      </a>
     </>
   );
 }

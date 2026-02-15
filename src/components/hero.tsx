@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 
 export function Hero() {
   return (
-    <section className="relative bg-brand-blue py-20 text-white md:py-28">
+    <section className="relative overflow-hidden bg-gradient-to-br from-brand-blue via-brand-blue to-blue-900 py-20 text-white md:py-28 animate-gradient-shift bg-[length:200%_200%]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <Badge className="mb-6 bg-brand-orange text-white text-sm px-4 py-1.5 hover:bg-brand-orange/90">
@@ -21,15 +21,14 @@ export function Hero() {
             <Button
               asChild
               size="lg"
-              className="bg-brand-orange text-white hover:bg-brand-orange/90 text-base px-8 py-6"
+              className="w-full sm:w-auto bg-brand-orange text-white hover:bg-brand-orange/90 text-base px-8 py-6"
             >
               <Link href="/equipment-rentals">Browse Equipment</Link>
             </Button>
             <Button
               asChild
               size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white/10 text-base px-8 py-6"
+              className="w-full sm:w-auto bg-white text-brand-blue hover:bg-white/90 text-base px-8 py-6"
             >
               <Link href="/party-rentals">Browse Party Rentals</Link>
             </Button>

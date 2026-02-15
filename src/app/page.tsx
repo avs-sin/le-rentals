@@ -64,10 +64,13 @@ export default function HomePage() {
               Browse our most popular equipment and party rental categories
             </p>
           </div>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {featured.map((cat) => (
-              <CategoryCard key={cat.slug} category={cat} />
-            ))}
+          <div className="mt-10 grid gap-6 grid-cols-2 md:grid-cols-3">
+            {featured.map((cat) => {
+              const firstImage = cat.items.find((item) => item.localImagePath)?.localImagePath;
+              return (
+                <CategoryCard key={cat.slug} category={cat} imageUrl={firstImage} />
+              );
+            })}
           </div>
           <div className="mt-8 flex justify-center gap-4">
             <Link
