@@ -87,6 +87,17 @@ export function Footer() {
           &copy; {new Date().getFullYear()} Lakeside Equipment &amp; Carl&apos;s
           Rentals. All rights reserved.
         </p>
+        <p className="mt-2 text-center text-xs text-white/40">
+          Website by{" "}
+          <a
+            href="https://vegasops.com?ref=lexiesbistro"
+            target="_blank"
+            rel="noopener"
+            className="hover:text-white/70 transition-colors"
+          >
+            VegasOps
+          </a>
+        </p>
       </div>
     </footer>
   );
